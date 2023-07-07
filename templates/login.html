@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="parent clearfix">
+        <div class="bg-illustration">
+          <img src="https://imgs.search.brave.com/5swiqPvPjW5qpeSRKYtZr3jqTRfx4wqv41mQMUVOn6Y/rs:fit:568:499:1/g:ce/aHR0cDovL2NpdHlv/ZmNyeXN0YWxzcHJp/bmdzLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMC8wOS9Q/YXktV2F0ZXItQmls/bC1Mb2dvLWUxNTk4/OTIxMTA2MzExLnBu/Zz9pcy1wZW5kaW5n/LWxvYWQ9MQ" alt="logo">
+    
+          <div class="burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    
+        </div>
+        
+        <div class="login">
+          <div class="container">
+            <h1>Login to access to<br />your account</h1>
+        
+            <div class="login-form">
+              <form action="login" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="E-mail Address">
+                <input type="password" name="password" placeholder="Password">
+    
+                <!--<div class="remember-form">
+                  <input type="checkbox">
+                  <span>Remember me</span>
+                </div>-->
+                {%if messages%}
+                        {%for mess in messages%}
+                        <b style="color: red;">{{mess}}</b>
+                        {%endfor%}
+                {%endif%}
+                <div class="forget-pass">
+                  <a href="{% url 'register'%}">Register</a>
+                </div>
+    
+                <button type="submit">LOG-IN</button>
+    
+              </form>
+            </div>
+        
+          </div>
+          </div>
+      </div> 
+</body>
+</html>

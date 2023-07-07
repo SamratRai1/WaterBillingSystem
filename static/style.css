@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.total{
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("../../media/examples/lizard.png");
+}
+
+.admin{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.admin img {
+    border-radius: 50%;
+    width: 4%;
+    height: 4%;
+}
+.d{
+    border: 3px solid black;
+    list-style-type: none;
+    color: black;
+    font-size: 30px;
+}
+.a{
+    color: black;
+    text-decoration: none;
+}
+.box{
+    border: 1px solid black;
+    padding-top: 110px;
+    height: 690px;
+}
+.water{
+    text-align: center;
+}
+.aa{
+    color: red;
+    text-decoration: underline;
+}
+.f{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.f1{
+    display: flex;
+    justify-content: space-around;
+}
+.b{
+   border: 2px solid black; 
+   margin-top: 150px;
+   font-size: large;
+}
+
+.table{
+    border: 1px solid black;
+}
+.frm{
+    padding: 90px;
+    margin:100px 300px 0 200px;
+    border: 1px solid black;
+}
+.i{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.bb{
+    margin:0 10px 20px 90%;
+    padding: 10px;
+    
+}
+ costumer 
+
+
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #070707;
+    text-align: left;
+    padding: 8px;
+  }
+  
+ 
+  }
+
+

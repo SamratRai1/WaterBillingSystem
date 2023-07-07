@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+   </head>
+<body>
+
+  <div class="container">
+    
+    <div class="title">Water Billing System</div>
+    <div class="content">
+      <form action="register" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" >Full Name</span>
+            <input type="text" placeholder="Full Name" name="full_name" required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details" >Email</span>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+         
+          <div class="input-box">
+            <span class="details" >Citizenship No.</span>
+            <input type="text" name="citizenship" placeholder="Citizenship Number" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details" >Address</span>
+            <input type="text" name="address" placeholder="Address" required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details" > Password</span>
+            <input type="password" name="password1" placeholder="Password" minlength=6 required>
+          </div>
+
+          <div class="input-box">
+            <span class="details" >Confirm Password</span>
+            <input type="password" name="password2" placeholder="Confirm Password" minlength=6 required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details" >Meter number</span>
+            <input type="number" name="meternum" placeholder="Meter Number" min=1 required>
+          </div>      
+      
+          
+        </div>
+        {%if messages%}
+                        {%for mess in messages%}
+                        <b style="color: red;">{{mess}}</b>
+                        {%endfor%}
+        {%endif%}
+        <div class="button">
+          <input type="submit" value="Sign Up">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
